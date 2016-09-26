@@ -1,0 +1,33 @@
+<ion-view view-title="{{chat.name.first}} {{chat.name.last}}">
+  <ion-content class="padding">
+  <!-- <ion-item ui-sref='tab.chats'> -->
+    <!-- <img ng-src="{{chat.face}}" style="width: 64px; height: 64px"> -->
+   <div class = "list">
+    <div class ="item item-avatar">
+    <img src = "{{chat.picture.thumbnail}}" />
+      <h2>{{chat.name.first}} {{chat.name.last}}</h2>
+      <p>{{chat.location.city}} {{chat.password}}</p>
+      </div>
+      <div class="item item-icon-left">
+        <i class ="icon ion-email royal"></i>
+        {{chat.email}}
+      </div>
+      <div class ="item item-icon-left">
+        <i class ="icon ion-ios-telephone energized"></i>
+        {{chat.phone}}
+        </div>
+        <div class="item item-icon-left">
+          <i class="icon ion-ios-home calm"></i>
+          <p>
+            {{chat.location.street}}
+            {{chat.location.city}}
+          </p>
+          <p>
+          {{chat.location.state}}
+            {{chat.location.postcode}}
+          </p>
+        </div>
+      </div>
+        <!-- </ion-item> -->
+      </ion-content>
+    </ion-view>

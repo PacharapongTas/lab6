@@ -228,7 +228,7 @@ angular.module('starter.controllers', [])
             photoURL: userSignup.photoprofile
           }).then(function() {
             // Update successful.
-            $state.go("login");
+            $state.go("app.browse");
           }, function(error) {
             // An error happened.
             console.log(error);
@@ -264,7 +264,7 @@ angular.module('starter.controllers', [])
         firebase.auth().sendPasswordResetEmail(userReset.rusername).then(function() {
           // Sign-In successful.
           //console.log("Reset email sent successful");
-          $state.go("login");
+          $state.go('app.browse');
           // $state.href('templates/login.html');
         }, function(error) {
           // An error happened.

@@ -23,10 +23,12 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-show ="islogin"ng-click="login()">
+        <ion-item menu-close ng-show ="islogin" ng-click = "login()">
           Login
         </ion-item>
-        <ion-item menu-close ng-show="islogout" ng-click="logout()" href="#/app/profile">
+        <ion-item menu-close ng-show="islogout" ng-click="doLogout()" href="#/app/profile">
+        <img src="" id="photo_user" height="100" width="100" />
+      <h3 id="displayName"></h3>
           logout
         </ion-item>
         <ion-item menu-close href="#/app/profile" >

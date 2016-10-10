@@ -87,6 +87,33 @@ views: {
  }
 })
 
+.state('app.dashboard', {
+        url: '/dashboard',
+        views: {
+          'menuContent': {
+            templateUrl: "templates/dashboard.html",
+            controller: "dashboardController"
+          }
+        }
+      })
+
+.state('login', {
+        url: '/login',
+        templateUrl: "templates/login.html",
+        controller: "loginController"
+      })
+.state('signup', {
+        url: '/signup',
+        templateUrl: "templates/signup.html",
+        controller: "signupController"
+      })
+.state('reset', {
+        url: '/reset',
+        templateUrl: "templates/resetemail.html",
+        controller: "resetController"
+      })
+
+
   .state('intro', {
     url: '/',
     templateUrl: 'templates/intro.html',

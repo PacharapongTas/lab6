@@ -43,6 +43,18 @@ angular.module('starter.controllers', [])
     $scope.modal = modal;
   });
 
+// $ionicModal.fromTemplateUrl('templates/signup.html', {
+//     scope: $scope
+//   }).then(function(modal) {
+//     $scope.modalsignup = modal;
+//   });
+
+  // $ionicModal.fromTemplateUrl('templates/resetemail.html', {
+  //   scope: $scope
+  // }).then(function(modal) {
+  //   $scope.modalreset = modal;
+  // });
+
   $scope.doLogin = function(userLogin) {
         if ($document[0].getElementById("user_name").value != "" && $document[0].getElementById("user_pass").value != "") {
           firebase.auth().signInWithEmailAndPassword(userLogin.username, userLogin.password).then(function() {
@@ -58,7 +70,7 @@ angular.module('starter.controllers', [])
               photoUrl = user.photoURL;
               uid = user.uid;
                 $scope.islogin = false;
-  $scope.islogout = true;
+                $scope.islogout = true;
               //console.log(name + "<>" + email + "<>" +  photoUrl + "<>" +  uid);
               localStorage.setItem("photo", photoUrl);
               localStorage.setItem("displayName", name);
@@ -112,6 +124,25 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
    $scope.modal.show();
   };
+
+  //  $scope.closeSignup = function() {
+  //   $scope.modalsignup.hide();
+  // };
+
+  // // Open the login modal
+  // $scope.Signup = function() {
+  //  $scope.modalsignup.show();
+  // };
+
+  // $scope.closeReset = function() {
+  //   $scope.modalreset.hide();
+  // };
+
+  // // Open the login modal
+  // $scope.Reset = function() {
+  //  $scope.modalreset.show();
+  // };
+
   // SendLog.isLogout();
   $scope.logout = function() {
   $scope.loginData = {};
@@ -285,6 +316,22 @@ angular.module('starter.controllers', [])
       } //end check client username password
     }; // end $scope.doSignup()
   }
+
+  // $ionicModal.fromTemplateUrl('templates/resetemail.html', {
+  //   scope: $scope
+  // }).then(function(modal) {
+  //   $scope.modalreset = modal;
+  // });
+
+  //  $scope.closeReset = function() {
+  //   $scope.modalreset.hide();
+  // };
+
+  // // Open the login modal
+  // $scope.Reset = function() {
+  //  $scope.modalreset.show();
+  // };
+
 ])
 
 

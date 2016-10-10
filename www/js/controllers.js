@@ -277,7 +277,7 @@ angular.module('starter.controllers', [])
             return false;
           }
         });
-     
+
       } else {
         alert('Please enter email and password');
         return false;
